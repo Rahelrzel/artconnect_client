@@ -7,7 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:icons_plus/icons_plus.dart';
 
+import '../../commission_request.dart';
+import '../../payment.dart';
 import '../project_approval.dart';
+import '../project_declined.dart';
+import '../project_rate.dart';
 import '../project_submission.dart';
 
 class CommissionDetails extends HookConsumerWidget {
@@ -37,7 +41,7 @@ class CommissionDetails extends HookConsumerWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ProjectApproval(),
+                    builder: (context) => const Payment(),
                   ));
             },
             icon: const Icon(Iconsax.emoji_normal),

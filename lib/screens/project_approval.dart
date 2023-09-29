@@ -27,19 +27,24 @@ class _ProjectApprovalState extends ConsumerState<ProjectApproval> {
       ),
       backgroundColor: Color(0xFFf2f2f2),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Container(
+              height: 250,
               padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 30),
               decoration: BoxDecoration(
                   color: primaryColor.shade800.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(6)),
+                  borderRadius: BorderRadius.circular(15)),
               child: Column(
                 children: [
                   Icon(
-                    BoxIcons.bx_cart_download,
+                    Icons.download_rounded,
                     size: 50,
+                  ),
+                  SizedBox(
+                    height: 20,
                   ),
                   Text(
                     'Download Project File',
@@ -53,6 +58,7 @@ class _ProjectApprovalState extends ConsumerState<ProjectApproval> {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               FilledButton(
                 onPressed: () {},
@@ -67,6 +73,9 @@ class _ProjectApprovalState extends ConsumerState<ProjectApproval> {
                   backgroundColor:
                       MaterialStatePropertyAll(primaryColor.shade700),
                 ),
+              ),
+              SizedBox(
+                width: 20,
               ),
               FilledButton(
                 onPressed: () {},

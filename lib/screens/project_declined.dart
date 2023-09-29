@@ -25,12 +25,12 @@ class _ProjectDeclinedState extends ConsumerState<ProjectDeclined> {
         ),
       ),
       backgroundColor: Color(0xFFf2f2f2),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Container(
-              height: 135,
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            Container(
+              height: 500,
               color: primaryColor.shade800.withOpacity(0.1),
               child: TextField(
                 decoration: InputDecoration(
@@ -45,39 +45,46 @@ class _ProjectDeclinedState extends ConsumerState<ProjectDeclined> {
                         color: primaryColor.shade600), // Set underline color
                   ),
                   label: Text(
-                    'Caption',
+                    'Declination letter',
                     style: TextStyle(
                         color: primaryColor.shade700,
                         fontSize: 20,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.w600),
                   ),
                   alignLabelWithHint: false,
                   floatingLabelAlignment: FloatingLabelAlignment.start,
                   floatingLabelBehavior: FloatingLabelBehavior.always,
                 ),
-                maxLines: 10,
-                minLines: 7,
+                maxLines: 50,
+                minLines: 30,
               ),
             ),
-          ),
-          Text(
-            'The artist will recive and try to update the project as your requirement',
-          ),
-          FilledButton(
-            style: ButtonStyle(
-                elevation: MaterialStatePropertyAll(0),
-                backgroundColor:
-                    MaterialStatePropertyAll(primaryColor.shade800)),
-            onPressed: () {},
-            child: Text(
-              'Upload Artwork',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'The artist will recive and try to update the project as your requirement',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            FilledButton(
+              style: ButtonStyle(
+                  elevation: MaterialStatePropertyAll(0),
+                  backgroundColor:
+                      MaterialStatePropertyAll(primaryColor.shade800)),
+              onPressed: () {},
+              child: Text(
+                'Send',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
